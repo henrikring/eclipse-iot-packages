@@ -1054,6 +1054,11 @@ deviceRegistryExample:
   # hono contains the Device Registry's configuration properties as defined in
   # https://www.eclipse.org/hono/docs/admin-guide/device-registry-config/
   hono:
+    app:
+      # maxInstances defines the number of adapter Verticle instances to deploy
+      # to the vert.x runtime during start-up.
+      maxInstances: 1
+
     # auth contains Hono client properties used by the example registry for
     # connecting to the Authentication service.
     # If not set, the registry by default uses the Auth Server component to
